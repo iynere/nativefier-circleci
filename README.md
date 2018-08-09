@@ -26,7 +26,7 @@ nativefier \
 
 - `--name`: the name of the app
 - `--internal-urls`: regular expression of URLs to open within the app, rather than in an external browser—necessary in this case in order to log into CircleCI via GitHub, Bitbucket, or Google
-- `--icon`: path to icon (.png or .icns) to use for the app
+- `--icon`: path to icon (.png or .icns) to use for the app (optional, but the default for CircleCI isn't pretty...)
 - see [API documentation](docs/api.md) for details
 
 You're done.
