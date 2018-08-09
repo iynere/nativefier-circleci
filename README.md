@@ -9,9 +9,9 @@
 
 You want to make a native wrapper for WhatsApp Web (or any web page)—in this case, CircleCI.
 
-First, [download the icon](https://github.com/iynere/nativefier-circleci/raw/master/icon.png) (or make/provide your own).
+First, [install `nativefier`](#installation). Then, [download the icon](https://github.com/iynere/nativefier-circleci/raw/master/icon.png) (or make/provide your own).
 
-Then:
+Finally:
 
 ```bash
 nativefier \
