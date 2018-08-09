@@ -22,7 +22,7 @@ nativefier \
   $APP_DESTINATION_DIR # optional; defaults to working directory
 ```
 
-**Notes:**
+### Notes
 
 - `--name`: the name of the app
 - `--internal-urls`: regular expression of URLs to open within the app, rather than in an external browser—necessary in this case in order to log into CircleCI via GitHub, Bitbucket, or Google
@@ -30,6 +30,10 @@ nativefier \
 - see [API documentation](docs/api.md) for details
 
 You're done.
+
+### Why?
+
+In this case, it's likely much faster than running Circle in your native browser. And it might be a convenient compartmentalization tool for those of us who have Circle open all day anyway. That said, you don't get any of your nice browser extensions, ad-blockers, etc., so ¯\_(ツ)_/¯.
 
 ## Table of Contents
 
