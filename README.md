@@ -1,4 +1,4 @@
-# Nativefier
+# Nativefier-CircleCI
 
 [![Build Status](https://travis-ci.org/jiahaog/nativefier.svg?branch=development)](https://travis-ci.org/jiahaog/nativefier)
 [![Code Climate](https://codeclimate.com/github/jiahaog/nativefier/badges/gpa.svg)](https://codeclimate.com/github/jiahaog/nativefier)
@@ -7,13 +7,24 @@
 
 ![Dock](screenshots/circleci.png)
 
-You want to make a native wrapper for WhatsApp Web (or any web page).
+You want to make a native wrapper for WhatsApp Web (or any web page)—in this case, CircleCI.
+
+First, [download the icon](https://github.com/iynere/nativefier-circleci/raw/master/icon.png) (or make/provide your own).
+
+Then:
 
 ```bash
-nativefier web.whatsapp.com
+nativefier \
+  --name CircleCI \
+  --internal-urls ".*circleci\.com.*|.*github\.com.*|.*bitbucket\.org.*|.*atlassian\.com.*|.*google\.com.*" \
+  --icon $ICON_PATH \
+  "https://circleci.com" \
+  $APP_DESTINATION_DIR # optional; defaults to working directory
 ```
 
-![Walkthrough](screenshots/walkthrough.gif)
+- `--name`: the name of the app
+- `--internal-urls`: regular expression of URLs to open within the app, rather than in an external browser—necessary in this case in order to log into CircleCI via GitHub, Bitbucket, or Google
+- see [API documentation](docs/api.md) for details
 
 You're done.
 
@@ -49,9 +60,7 @@ I did this because I was tired of having to `⌘-tab` or `alt-tab` to my browser
 - [Node.js](https://nodejs.org/) `>=6` (4.x may work but is no longer tested, please upgrade)
 - See [optional dependencies](#optional-dependencies) for more.
 
-```bash
-npm install nativefier -g
-```
+`npm install nativefier -g` or `yarn global add nativefier`
 
 ## Usage
 
