@@ -1,4 +1,4 @@
-# Nativefier-CircleCI
+# Nativefier for CircleCI
 
 [![Build Status](https://travis-ci.org/jiahaog/nativefier.svg?branch=development)](https://travis-ci.org/jiahaog/nativefier)
 [![Code Climate](https://codeclimate.com/github/jiahaog/nativefier/badges/gpa.svg)](https://codeclimate.com/github/jiahaog/nativefier)
@@ -22,8 +22,11 @@ nativefier \
   $APP_DESTINATION_DIR # optional; defaults to working directory
 ```
 
+**Notes:**
+
 - `--name`: the name of the app
 - `--internal-urls`: regular expression of URLs to open within the app, rather than in an external browser—necessary in this case in order to log into CircleCI via GitHub, Bitbucket, or Google
+- `--icon`: path to icon (.png or .icns) to use for the app
 - see [API documentation](docs/api.md) for details
 
 You're done.
