@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/nativefier.svg)](https://www.npmjs.com/package/nativefier)
 [![Dependency Status](https://david-dm.org/jiahaog/nativefier.svg)](https://david-dm.org/jiahaog/nativefier)
 
-![Dock](screenshots/dock.png)
+![Dock](screenshots/circleci.png)
 
 You want to make a native wrapper for WhatsApp Web (or any web page).
 
@@ -109,7 +109,7 @@ Get started with our docs: [Development](docs/development.md), [API](docs/api.md
 The [Dockerfile](Dockerfile) is designed to be used like the "normal" nativefier app. By default, the command `nativefier --help` will be executed. Before you can use the image, you have to build it:
 
     docker build -t local/nativefier .
- 
+
 After that, you can build your first nativefier app to the local `$TARGET-PATH`. Ensure you have write access to the `$TARGET-PATH`:
 
     docker run -v $TARGET-PATH:/target local/nativefier https://my-web-app.com/ /target/
